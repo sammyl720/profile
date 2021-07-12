@@ -1,9 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --color-primary: #00bcd4;
+  --color-secondary: #ff4081;
+  --color-dark: #2c3e50;
+  --color-light: #f1f2f4;
+}
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -13,4 +19,186 @@ a {
 
 * {
   box-sizing: border-box;
+  margin:0;
+  padding: 0;
+}
+
+
+.layout {
+  margin: 0 auto;
+  max-width: 800px;
+  position: relative;
+  color: var(--color-dark);
+  background-color: var(--color-light);
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav {
+  background-color: #070d13be;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #c9d1da;
+  font-size: large;
+  font-weight: bold;
+  position: fixed;
+  width: 100%;
+  max-width: 800px;
+}
+
+.nav a {
+  color: #c9d1da;
+  text-decoration: none;
+  display: block;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: large;
+  font-weight: bolder;
+}
+
+.nav .flex-row a:hover {
+  color: var(--color-primary);
+}
+.layout > main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+a > i.icon-bg {
+  font-size: 2rem;
+}
+
+.header, .section {
+  line-height: 1.4;
+  padding: 6rem 1rem 2rem;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: var(--color-dark);
+  color: var(--color-light);
+}
+
+.section#certificates {
+  background: var(--color-light);
+  color:  var(--color-dark);
+}
+
+
+.header h1::before {
+  content: '';
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.295);
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  background-image: url('/profile.jpg');
+  background-size: cover;
+}
+.header h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  margin: 1rem auto;
+}
+
+.flex-box{
+  display: flex;
+  flex-direction: column;
+}
+
+.header > .flex-box, .section > .flex-box {
+  max-width: 80%;
+  margin: auto;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+
+.flex-box.profile small{
+  text-align: center;
+}
+
+.flex-box ul {
+  list-style: none;
+}
+
+.flex-box > p {
+  margin: 2rem auto;
+}
+
+.flex-box a {
+  color: var(--color-primary);
+}
+
+.cert-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cert-list a {
+  margin: 1rem auto;
+  width: 100%;
+}
+.cert-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cert-item > img {
+  margin-left: 2vw;
+}
+
+
+.cert-item img {
+  max-width: 100px;
+  height: auto;
+}
+
+.site {
+  margin: 1rem auto;
+  width: 100%;
+}
+
+.footer {
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  padding: 1rem;
+}
+
+.footer > .flex-row {
+  font-size: 2rem;
+}
+
+.footer > .flex-row > a {
+  color: var(--color-dark);
+  margin: 0 1rem;
+}
+@media (max-width: 600px) {
+
+  h1 {
+    font-size: 1.25rem !important;
+    line-height: normal;
+  }
+
+  p {
+    font-size: 1rem !important;
+    line-height: 1.25;
+  }
 }

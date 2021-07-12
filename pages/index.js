@@ -1,65 +1,52 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-
+import Certificate from '../components/Certificate'
+import certificates from '../data/certificates'
+import sites from '../data/sites';
+import Site from '../components/Site'
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div className='page'>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Portfolio | Shmuel Leider</title>
       </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+      <header className='header' id='portfolio'>
+        <div className="flex-box profile">
+          <h1>Shmuel Leider</h1>
+          <small>Software Developer</small>
         </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+        <div className="flex-box content">
+          <h3>Portfolio</h3>
+          <p>
+            I am a fullstack developer with over 5 years of experience working in the javacript-based web application development space. My experience spans a wide range of programming languages and frameworks, including: Javascript, TypeScript, Python, and more.
+          </p>
+          <p>
+            I am currently working on <a href='https://github.com/sammyl720/graphql-social-app' target='_blank'>a graphql api</a> as a backend to  a web application that lets you stay connected to your family, friends and peers.
+          </p>
+          <p>
+            I am also working on <a href='https://github.com/sammyl720/graphql-social-client' target='_blank'> a next.js application</a> which serves as the frontend for the aforementioned graphql api.
+          </p>
+        </div>
+      </header>
+      <section className='section' id="certificates">
+        <div className="flex-box">
+          <h2>Certificates</h2>
+          <div className='cert-list'>
+            { certificates.map(cert => (
+              <Certificate key={cert.name} {...cert} />
+             ))}
+          </div>
+        </div>
+      </section>
+      <section className='section' id="sites">
+        <div className="flex-box">
+          <h2>Sites &amp; Applications</h2>
+          <div className='cert-list'>
+            { sites.map(site => (
+              <Site key={site.name} {...site} />
+             ))}
+          </div>
+        </div>
+      </section>
     </div>
   )
 }
