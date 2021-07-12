@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import Certificate from '../components/Certificate'
 import certificates from '../data/certificates'
 import sites from '../data/sites';
@@ -6,9 +5,6 @@ import Site from '../components/Site'
 export default function Home() {
   return (
     <div className='page'>
-      <Head>
-        <title>Portfolio | Shmuel Leider</title>
-      </Head>
       <header className='header' id='portfolio'>
         <div className="flex-box profile">
           <h1>Shmuel Leider</h1>

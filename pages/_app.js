@@ -10,6 +10,9 @@ function MyApp({ Component, pageProps }) {
           <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
           <link rel="manifest" href="/site.webmanifest" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" referrerpolicy="no-referrer" />
+        <meta name="description" content="Shmuel Leider is a Javascript fullstack Software Developer with over 5 years experience, based out of brooklyn. He is familiar with typescript, nodejs, mongodb, express, graphql, react... " />
+        <meta name="keywords" content="javascript,typescript,nodejs,mongodb,expressjs,graphql,react,reactjs,nextjs,css,scss,html5,css3,docker,git,github,scss" />
+        <title>Portfolio | Shmuel Leider</title>
       </Head>
       <Component {...pageProps} />
     </Layout>
